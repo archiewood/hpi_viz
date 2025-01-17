@@ -77,7 +77,6 @@ where level = 'State'
   y="index_nsa"
   yMax=700
   xAxisLabels=false
-  yAxisLabels={i % 3 == 0}
   yGridlines=false
   title={row.place_name}
   downloadableData=false
