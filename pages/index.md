@@ -1,6 +1,7 @@
 ---
 title: US House Price Index 1991-2024
 description: Displayed are indexed, non-seasonal adjusted house prices for the US and each state.
+hide_title: true
 ---
 
 # Vizualize Data from APIs
