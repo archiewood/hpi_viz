@@ -1,6 +1,9 @@
 ---
-title: Vizualize Data from APIs with Evidence
+title: US House Price Index 1991-2024
+description: Displayed are indexed, non-seasonal adjusted house prices for the US and each state.
 ---
+
+# Vizualize Data from APIs
 
 The data from this page is fetched from the [FHFA House Price Index](https://www.fhfa.gov/hpi/download/monthly/hpi_master.json) using the Evidence [JavaScript data source](https://docs.evidence.dev/core-concepts/data-sources/#javascript).
 
@@ -16,8 +19,6 @@ select count(*) as total_records from hpi.index
   data={total_records}
   value="total_records"
 />
-
-## National Data
 
 ```sql hpi_query
 select 
@@ -42,7 +43,7 @@ select distinct level from hpi.index
   y="index_nsa" 
   x="period_yr" 
   sort=false 
-  title="US House Price Index, Non Seasonal Adjusted"
+  title="US House Prices, Index 1991 = 100"
 />
 
 ## State Data
@@ -75,7 +76,7 @@ where level = 'State'
   y="index_nsa"
   yMax=700
   xAxisLabels=false
-  yAxisLabels={i % 4 == 0}
+  yAxisLabels={i % 3 == 0}
   yGridlines=false
   title={row.place_name}
   downloadableData=false
